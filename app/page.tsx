@@ -1,12 +1,25 @@
 import { Button } from "@mui/material";
 import Link from "next/link";
 
+const PAGES = [
+  {
+    name: "Spring",
+    href: "/spring",
+  },
+  {
+    name: "Drag",
+    href: "/drag",
+  },
+];
+
 export default function Home() {
   return (
     <div>
-      <Button variant="contained" color="primary">
-        <Link href="/spring">Spring</Link>
-      </Button>
+      {PAGES.map((page) => (
+        <Button variant="contained" color="primary" key={page.href}>
+          <Link href={page.href}>{page.name}</Link>
+        </Button>
+      ))}
     </div>
   );
 }
