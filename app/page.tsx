@@ -10,6 +10,10 @@ const PAGES = [
     name: "Drag",
     href: "/drag",
   },
+  {
+    name: "Enter",
+    href: "/enter",
+  },
 ];
 
 export default function Home() {
